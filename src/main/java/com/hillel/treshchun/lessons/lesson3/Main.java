@@ -8,5 +8,6 @@ public class Main {
         System.out.println("Hello Git");
 //      Repository name: Treshchun_JBasic_23_Nov2023
 //        Adding a comment to modify file
+//        Adding a comment on GitHub to syn with the local repository
     }
 }
