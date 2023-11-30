@@ -12,8 +12,8 @@ public class HW4 {
         int volumeABC = a * b * c;
         int lengthABC = 4 * (a + b + c);
 
-        System.out.println("Об'єм паралелепіпеда = " + volumeABC + ' ' + unit);
-        System.out.println("Периметр паралелепіпеда = " + lengthABC + ' ' + volumeUnit);
+        System.out.println("Об'єм паралелепіпеда = " + volumeABC + ' ' + volumeUnit);
+        System.out.println("Периметр паралелепіпеда = " + lengthABC + ' ' + unit);
 
     }
 }
