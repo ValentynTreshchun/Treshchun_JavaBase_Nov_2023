@@ -6,5 +6,6 @@ public class Main_2 {
 //        Printing time in seconds
         System.out.println("This line was added on GitHub");
 //Testing push after repository rename
+// Adding a change and then forgetting to commit it
     }
 }
