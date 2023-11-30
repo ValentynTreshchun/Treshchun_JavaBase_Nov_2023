@@ -5,6 +5,6 @@ public class Main_2 {
         System.out.println(System.currentTimeMillis()*1000);
 //        Printing time in seconds
         System.out.println("This line was added on GitHub");
-
+//Testing push after repository rename
     }
 }
