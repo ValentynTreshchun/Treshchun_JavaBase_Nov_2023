@@ -24,7 +24,7 @@ public class HW6 {
         double team2AVG = 0;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the name of the first team and press \"Enter\":");
+        System.out.print("Welcome to the latest edition of Counter-Strike! \nEnter the name of the first team and press \"Enter\":");
         team1Name = scanner.nextLine();
         System.out.print("Enter frags value for 5 players of " + team1Name + ", separated by \" \" or by \'Enter\': ");
 
