@@ -64,6 +64,5 @@ public class HW8 {
             }
         }
         System.out.println("Total ship registration numbers assigned: " + controlSum);
-
     }
 }
