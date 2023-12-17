@@ -14,14 +14,15 @@ public class HW7 {
                 System.out.print("\nEnter your guess: ");
                 while (!scanner.hasNextInt()){
                         System.out.print("Wrong data entered, please enter an integer: ");
-                        scanner = new Scanner(System.in);
+//                        scanner = new Scanner(System.in);
 //                        starting a new stream instead of "scanner.nextLine();" as I could not find a better way of having multiple \n in input stream
 //                        which resulted in "while" cycle repeating more than once. is there a better way?
+                        scanner.nextLine();
                     }
                 guessNumber = scanner.nextInt();
+                scanner.nextLine();
                 if (guessNumber == randNumber){
                     System.out.println("You won! The random number is indeed " + randNumber + "\n");
-                    scanner.nextLine();
                     break;
                 } else {
                     System.out.println("Wrong guess. You have " + (i-1) + " attempts left");
@@ -29,7 +30,6 @@ public class HW7 {
             }
             if (guessNumber != randNumber){
                 System.out.println("You lost. The true random number was " + randNumber);
-                scanner.nextLine();
             }
             System.out.print("Would you like to play again? Y/N: ");
             gameRepeat = scanner.nextLine();

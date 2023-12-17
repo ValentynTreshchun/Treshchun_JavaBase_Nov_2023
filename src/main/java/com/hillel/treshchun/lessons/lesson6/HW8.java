@@ -27,13 +27,11 @@ public class HW8 {
             }
             if (second) {
                 unluckyTwo = scanner.nextInt();
+                scanner.nextLine();
                 System.out.println("second unlucky = " + unluckyTwo);
                 luckyBothEntered = true;
             }
         }
-//        unluckyOne = scanner.nextInt();
-//        unluckyTwo = scanner.nextInt();
-        scanner.nextLine();
         System.out.println("Unlucky numbers in this batch are " + unluckyOne + " and " + unluckyTwo);
 
         System.out.print("Please enter the amount of ships you would like to register (0 - 2^31):");
