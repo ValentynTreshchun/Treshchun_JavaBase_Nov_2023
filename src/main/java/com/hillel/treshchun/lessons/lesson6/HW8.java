@@ -16,14 +16,14 @@ public class HW8 {
             boolean second = true;
             while (!scanner.hasNextInt()){
                 System.out.print("Wrong data in first position, please enter two integers again, separated by a space: ");
-                scanner = new Scanner(System.in);
+                scanner.nextLine();
             }
             unluckyOne = scanner.nextInt();
             System.out.println("first unlucky = " + unluckyOne);
             while (!scanner.hasNextInt()){
                 System.out.print("Wrong data in second position, please enter two integers again, separated by a space: ");
                 second = false;
-                scanner = new Scanner(System.in);
+                scanner.nextLine();
             }
             if (second) {
                 unluckyTwo = scanner.nextInt();
@@ -37,7 +37,7 @@ public class HW8 {
         System.out.print("Please enter the amount of ships you would like to register (0 - 2^31):");
         while (!scanner.hasNextInt()){
             System.out.println("Wrong data entered, please enter an integer: ");
-            scanner = new Scanner(System.in);
+            scanner.nextLine();
         }
         shipsAmount = scanner.nextInt();
         scanner.nextLine();
