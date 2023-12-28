@@ -1,5 +1,7 @@
 package com.hillel.treshchun.lessons.lesson9;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -9,25 +11,56 @@ public class HW11 {
         int y = 0;
         int z = 0;
         Scanner scanner = new Scanner(System.in);
+        boolean sizeOk = false;
+
         System.out.print("1. Transponding a 2D and 3D matrix.\nEnter number of planes: ");
-        while (!scanner.hasNextInt()){
-            System.out.print("Wrong data entered, please enter an integer: ");
+        while (!sizeOk) {
+            while (!scanner.hasNextInt()) {
+                System.out.print("Wrong data entered, please enter a positive integer: ");
+                scanner.nextLine();
+            }
+            x = scanner.nextInt();
             scanner.nextLine();
+            if (x > 0) {
+                sizeOk = true;
+            } else {
+                System.out.print("Please enter a positive integer: ");
+            }
         }
-        x = scanner.nextInt();
-        scanner.nextLine();
+        sizeOk = false;
+
         System.out.print("Enter number of rows: ");
-        while (!scanner.hasNextInt()){
-            System.out.print("Wrong data entered, please enter an integer: ");
+
+        while (!sizeOk) {
+            while (!scanner.hasNextInt()) {
+                System.out.print("Wrong data entered, please enter a positive integer: ");
+                scanner.nextLine();
+            }
+            y = scanner.nextInt();
+            scanner.nextLine();
+            if (y > 0) {
+                sizeOk = true;
+            } else {
+                System.out.print("Please enter a positive integer: ");
+            }
         }
-        y = scanner.nextInt();
-        scanner.nextLine();
+        sizeOk = false;
+
         System.out.print("Enter number of columns: ");
-        while (!scanner.hasNextInt()){
-            System.out.print("Wrong data entered, please enter an integer: ");
+
+        while (!sizeOk) {
+            while (!scanner.hasNextInt()) {
+                System.out.print("Wrong data entered, please enter a positive integer: ");
+                scanner.nextLine();
+            }
+            z = scanner.nextInt();
+            scanner.nextLine();
+            if (z > 0) {
+                sizeOk = true;
+            } else {
+                System.out.print("Please enter a positive integer: ");
+            }
         }
-        z = scanner.nextInt();
-        scanner.nextLine();
 
         int [][][] matrix3D = new int [x][y][z];
         System.out.println("Generated matrix:");
@@ -46,7 +79,7 @@ public class HW11 {
                 System.out.println();
             }
         }
-        
+
         int [][] transp2D = new int [matrix3D[0][0].length][matrix3D[0].length];
 
 //        Transponding a 2d matrix from the first plane of the generated 3D matrix:
