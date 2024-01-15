@@ -1,4 +1,4 @@
-package com.hillel.treshchun.lessons.lesson11;
+package com.hillel.treshchun.lessons.lesson10;
 
 public class Person {
 
