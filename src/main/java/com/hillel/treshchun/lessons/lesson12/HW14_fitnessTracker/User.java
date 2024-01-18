@@ -16,16 +16,16 @@ public class User {
     private int stepsCount;
 
     public User(String firstName, String lastName, int birthYear, int birthMonth, int birthDay, String email, String phoneNumber, int weight, String bloodPressure, int stepsCount) {
-        this.firstName = (firstName.isBlank() || firstName.isEmpty()) ? "N/A" : firstName;
+        this.firstName = (firstName == null || firstName.isBlank() || firstName.isEmpty()) ? "N/A" : firstName;
+        this.lastName = (lastName == null || lastName.isBlank() || lastName.isEmpty()) ? "N/A" : lastName;
         this.birthYear = (birthYear > 0 && birthYear < 2025) ? birthYear : 2024;
-        this.birthMonth = (birthMonth > 0 && birthMonth < 13) ? birthMonth : 1;;
+        this.birthMonth = (birthMonth > 0 && birthMonth < 13) ? birthMonth : 1;
         this.birthDay = (birthDay > 0 && birthDay < 31) ? birthDay : 1;
         age = 2024 - this.birthYear;
-        this.email = (email.isBlank() || email.isEmpty()) ? "N/A" : email;
-        this.phoneNumber = (phoneNumber.isBlank() || phoneNumber.isEmpty()) ? "N/A" : phoneNumber;
-        this.lastName = (lastName.isBlank() || lastName.isEmpty()) ? "N/A" : lastName;
+        this.email = (email == null || email.isBlank() || email.isEmpty()) ? "N/A" : email;
+        this.phoneNumber = (phoneNumber == null || phoneNumber.isBlank() || phoneNumber.isEmpty()) ? "N/A" : phoneNumber;
         this.weight = (weight > 0) ? weight : 0;
-        this.bloodPressure = (bloodPressure.isBlank() || bloodPressure.isEmpty()) ? "N/A" : bloodPressure;
+        this.bloodPressure = (bloodPressure == null || bloodPressure.isBlank() || bloodPressure.isEmpty()) ? "N/A" : bloodPressure;
         this.stepsCount = (stepsCount > 0) ? stepsCount : 0;
     }
 
@@ -74,7 +74,11 @@ public class User {
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        if (lastName == null || lastName.isBlank() || lastName.isEmpty()) {
+            System.out.println("Void name entry attempt, value not changed");
+        } else {
+            this.lastName = lastName;
+        }
     }
 
     public void setWeight(int weight) {
@@ -87,7 +91,11 @@ public class User {
     }
 
     public void setBloodPressure(String bloodPressure) {
-        this.bloodPressure = bloodPressure;
+        if (bloodPressure == null || bloodPressure.isBlank() || bloodPressure.isEmpty()) {
+            System.out.println("Void pressure entry attempt, value not changed");
+        } else {
+            this.bloodPressure = bloodPressure;
+        }
     }
 
     public void setStepsCount(int stepsCount) {
